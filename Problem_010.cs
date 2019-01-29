@@ -2,24 +2,23 @@ using System;
 
 namespace EulerProject
 {
-    public class Problem_007
+    public class Problem_010
     {
         public void Run()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            var maxPrimes = 10001;
+            var number = 2000000;
+            long sumPrimes = 0;
 
-            var currentPrimeId = 0;
-            var number = 2;
-            while (currentPrimeId < maxPrimes)
+            for (int i = 2; i < number; i ++)
             {
-                if (IsPrime(number))
+                if (IsPrime(i))
                 {
-                    currentPrimeId++;
+                    sumPrimes += i;
                 }
-                number++;
             }
-            Console.WriteLine(number - 1);
+
+            Console.WriteLine(sumPrimes);
 
             watch.Stop();
             Console.WriteLine("Time taken: " + watch.ElapsedMilliseconds + "ms");

@@ -6,7 +6,7 @@ namespace EulerProject
     {
         static void Main(string[] args)
         {
-            Problem_009 p = new Problem_009();
+            Problem_011 p = new Problem_011();
             p.Run();
         }
     }
